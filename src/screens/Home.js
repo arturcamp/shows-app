@@ -8,11 +8,13 @@ const HomeScreen = () => {
     const [statePesquisa, setStatePesquisa] = useState("");
     return (
         <>
-            <View style={styles.viewStyle}>
-                <SearchInput onChange={(text)=>setStatePesquisa(text)} initialValue={""} />
-            </View>
-            <View style={styles.viewStyle}>
-                <Input label="Nome" onChange={(text)=>setStateNome(text)} initialValue={""} />
+            <View  style={styles.parentStyle}>
+                <View style={styles.viewStyle}>
+                    <SearchInput onChange={(text)=>setStatePesquisa(text)} initialValue={""} />
+                </View>
+                <View style={styles.viewStyle}>
+                    <Input label="Nome" onChange={(text)=>setStateNome(text)} initialValue={""} />
+                </View>
             </View>
       </>
     )
@@ -21,10 +23,15 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+    parentStyle:{
+        flex: 1,
+        marginTop: 25
+
+    },    
     viewStyle:{
        flex: 1,
        alignItems: "stretch",
        justifyContent: "flex-start", 
-       marginTop: 10
+       marginTop: 8
     }
 })

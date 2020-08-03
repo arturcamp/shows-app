@@ -30,9 +30,10 @@ const styles = StyleSheet.create({
     viewStyle:{
         backgroundColor: "#ded9c5",
         flexDirection:"row",
-        borderRadius: 20,
+        borderRadius: 50,
         height: 40,
-        margin: 8
+        marginLeft: 8,
+        marginRight: 8
     },
     textStyle:{
         alignSelf: "center",
